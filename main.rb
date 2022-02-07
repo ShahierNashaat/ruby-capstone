@@ -10,6 +10,8 @@ class Main
     while action != 10
       display_actions
       action = gets.chomp.to_i
+      @app.check
+      # @app.handle_action(action)
     end
   end
 
