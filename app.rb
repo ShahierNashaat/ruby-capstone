@@ -1,5 +1,5 @@
 class App
-  def intialize
+  def initialize
     @books = []
     @music_albums = []
     @games = []
