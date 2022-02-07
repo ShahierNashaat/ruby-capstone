@@ -19,9 +19,7 @@ class App
     end
   end
 
-  def list_all_books
-    # puts 'Enter book name'
-  end
+  def list_all_books; end
 
   def list_all_music_album; end
 
