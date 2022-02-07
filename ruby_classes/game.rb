@@ -10,4 +10,5 @@ class Game < Item
     current_year = Time.new.year
     elapsed_time = current_year - last_played_at
     super() and (elapsed_time > 2)
+  end
 end
