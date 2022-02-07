@@ -28,6 +28,10 @@ class Item
     @label.items.push(self) unless @label.items.include?(self)
   end
 
+  def move_to_archive
+    can_be_archived? ? @archived = true
+  end
+
   private
 
   def can_be_archived?
