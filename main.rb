@@ -1,7 +1,10 @@
 class Main
   def run
-    display_actions
-
+    action = 0
+    while action != 11
+      display_actions
+      action = gets.chomp.to_i
+    end
   end
 
   def display_actions
