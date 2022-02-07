@@ -4,4 +4,10 @@ class Game < Item
   def initialize(multiplayer, last_played_at)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
+  end
+
+  def can_be_archived?
+    current_year = Time.new.year
+    elapsed_time = current_year - last_played_at
+    super() and (elapsed_time > 2)
 end
