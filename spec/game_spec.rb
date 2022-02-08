@@ -1,4 +1,5 @@
 require './ruby_classes/game'
+require 'date'
 
 describe Game do
   before :each do

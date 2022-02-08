@@ -1,9 +1,10 @@
 require './ruby_classes/author'
 require './ruby_classes/game'
+require 'date'
 
 describe Author do
   context 'It should create author and add item' do
-    @author = Author.new('first_name', 'last_name')
+    @author = Author.new(first_name: 'first_name',last_name: 'last_name')
     it 'Should create a new author' do
       expect(@author.first_name).to eq 'first_name'
       expect(@author.last_name).to eq 'last_name'
