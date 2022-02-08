@@ -1,24 +1,25 @@
 require './ruby_classes/game'
-require 'date'
 
 describe Game do
-  before :each do
-    @game = Game.new(multiplayer: false, last_played_at: 2000, publish_date: Date.parse('2022/02/04'))
-  end
-  
-  it 'should detect multiplayer' do
-    expect(@game.multiplayer).to eq true
-  end
+  context 'test game' do
+    before :each do
+      @game = Game.new(false, '2010-9-8', '2008-9-9')
+    end
+    
+    it 'check instance' do
+      expect(@game).to be_an_instance_of Game
+    end
 
-  it 'should detect last_player_at' do
-    expect(@game.last_played_at).to eq 2000
-  end
+    it 'check publish_date' do
+      expect(@game.publish_date).to eq '2008-9-9'
+    end
 
-  it 'should detect publish_date' do
-    expect(@game.publish_date).to eq Date.parse('2022/02/04')
-  end
+    it 'check last_played_at' do
+      expect @last_played_at == '2010-9-8'
+    end
 
-  it 'shoud return true since the last played date is mor than 2 years ago' do
-    expect(@game.can_be_archived?).to eq true
+    it 'check multiplayer' do
+      expect @multiplayer == false
+    end
   end
 end
