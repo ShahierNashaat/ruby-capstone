@@ -6,9 +6,6 @@ describe MusicAlbum do
     it 'Should return an instance of the Class musicAlbum' do
       expect(music_album_one).to be_an_instance_of MusicAlbum
     end
-    # it 'Should Return false' do
-    #   expect(music_album_one.can_be_archived?).to be true
-    # end
   end
 
   context 'When MusicAlbum is on_spotity to false' do
@@ -16,9 +13,5 @@ describe MusicAlbum do
     it 'Should return an instance of the Class musicAlbum' do
       expect(music_album_two).to be_an_instance_of MusicAlbum
     end
-
-    # it 'Should Return true' do
-    #   expect(music_album_two.can_be_archived?).to be false
-    # end
   end
 end
