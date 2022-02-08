@@ -3,7 +3,7 @@ require './ruby_classes/game'
 describe Game do
   context 'test game' do
     before :each do
-      @game = Game.new(false, '2010-9-8', '2008-9-9')
+      @game = Game.new(id:, false, '2010-9-8', '2008-9-9')
     end
     
     it 'check instance' do
