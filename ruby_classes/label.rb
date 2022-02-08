@@ -11,6 +11,6 @@ class Label
 
   def add_item(item)
     @items.push(item)
-    item.genre = self
+    item.label = self
   end
 end
