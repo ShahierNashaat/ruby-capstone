@@ -3,7 +3,7 @@ module GameModule
     print "#{request_text}: "
     gets.chomp
   end
-  
+
   def add_new_game
     puts "\n-------------------------------"
     puts "\nENTER GAME DETAILS\n\n"
