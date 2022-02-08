@@ -8,7 +8,7 @@
 ## Built With
 
 - Major languages
-- Frameworks
+- Framework
 - Technologies used
 
 ## Live Demo (if available)
