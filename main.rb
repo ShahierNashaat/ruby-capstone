@@ -12,6 +12,8 @@ class Main
       action = gets.chomp.to_i
       @app.handle_action(action)
     end
+    @app.save_data
+    puts 'Thank you for using our application'
   end
 
   def display_actions
