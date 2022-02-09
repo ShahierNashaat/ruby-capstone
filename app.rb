@@ -22,7 +22,7 @@ class App
   def handle_action(option)
     case option
     when 1..9
-      handle_valid_actions(action)
+      handle_valid_actions(option)
     else
       puts 'Please put a number between 1 and 10'
     end
