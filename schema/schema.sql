@@ -36,10 +36,10 @@ CREATE TABLE item (
 
 CREATE TABLE books (
     id  INT,
-    title VARCHAR(100)
+    title VARCHAR(100),
     publisher VARCHAR(100),
     cover_state VARCHAR(100),
-    FOREIGN KEY(id) REFERENCES item(id),
+    FOREIGN KEY(id) REFERENCES item(id)
 );
 
 CREATE TABLE music_albums (
@@ -51,7 +51,7 @@ CREATE TABLE music_albums (
 
 
 CREATE TABLE games (
-    id  INT GENERATED ALWAYS AS IDENTITY,
+    id  INT,
     multiplayer BOOLEAN,
     last_played_at DATE,
     FOREIGN KEY(id) REFERENCES item(id)
