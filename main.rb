@@ -7,6 +7,8 @@ class Main
 
   def run
     action = 0
+    puts
+    puts 'Welcome to our application!'
     while action != 10
       display_actions
       action = gets.chomp.to_i
@@ -17,8 +19,6 @@ class Main
   end
 
   def display_actions
-    puts
-    puts 'Welcome to our application!'
     puts
     puts '1-  List all books'
     puts '2-  List all music albums'

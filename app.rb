@@ -6,17 +6,26 @@ require './ruby_classes/music_album'
 require './ruby_classes/music_genre'
 require './modules/book_module'
 require './modules/label_module'
+require './modules/author_module'
+require './modules/game_module'
+require './modules/music_album_module'
+require './modules/music_genre_module'
 
 class App
   include LabelsDataController
   include BooksDataController
+  include AuthorModule
+  include GameModule
+  include MusicAlbumDataController
+  include MusicGenresDataController
+
   def initialize
     @books = load_books
-    @music_albums = []
-    @games = []
-    @genres = []
+    @music_albums = load_albums
+    @games = load_game
+    @genres = load_genres
     @labels = load_labels
-    @authors = []
+    @authors = load_author
   end
 
   def handle_action(option)
@@ -61,7 +70,7 @@ class App
   def list_all_labels
     puts 'Labels'
     @labels.each do |label|
-      puts "Title: #{label.title} Color: #{label.color}"
+      puts "Title: #{label.title}, Color: #{label.color}"
     end
   end
 
@@ -131,6 +140,10 @@ class App
   def save_data
     save_books
     save_labels
+    add_author
+    save_game
+    save_albums
+    save_genres
   end
 
   private

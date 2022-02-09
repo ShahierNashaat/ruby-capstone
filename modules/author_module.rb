@@ -7,7 +7,7 @@ module AuthorModule
     data = []
     if File.exist?(file) && File.read(file) != ''
       JSON.parse(File.read(file)).each do |ele|
-        data.push(game.new(ele['first_name'], ele['last_name']))
+        data.push(Author.new(ele['first_name'], ele['last_name']))
       end
     end
     data
