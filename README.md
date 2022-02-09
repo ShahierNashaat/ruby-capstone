@@ -20,7 +20,7 @@ To get a local copy of this project:
 
 Clone this repository or download the Zip folder:
 ```
-git clone https://github.com/ShahierNashaat/OOP-school-library.git
+git clone https://github.com/ShahierNashaat/ruby-capstone.git
 ```
 
 To get started, In the root directory run:
