@@ -46,7 +46,7 @@ rubocop
 To auto-correct Rubocop offenses run:
 ```
 rubocop --auto-correct-all | rubocop -A
-
+```
 
 ## Authors
 
