@@ -7,7 +7,7 @@ module GameModule
     data = []
     if File.exist?(file) && File.read(file) != ''
       JSON.parse(File.read(file)).each do |ele|
-        data.push(game.new(ele['multiplayer', ele['last_played_at'], ele['publish_date']]))
+        data.push(game.new(ele['multiplayer'], ele['last_played_at'], ele['publish_date']))
   end
 
   def add_game
