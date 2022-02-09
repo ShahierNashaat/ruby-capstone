@@ -15,7 +15,7 @@ module GameModule
 
   def add_game
     data = []
-    @game.each do |game|
+    @games.each do |game|
       data.push({ multiplayer: game.multiplayer, last_played_at: game.last_played_at, publish_date: game.publish_date })
     end
     File.write('./json_files/game.json', JSON.generate(data))
