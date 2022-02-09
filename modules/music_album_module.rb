@@ -5,7 +5,7 @@ module MusicAlbumDataController
   def load_albums
     if File.exist?('./json_files/album.json') && File.read('./json_files/album.json') != ''
       JSON.parse(File.read('./json_files/album.json')).map do |album|
-        MusicAlbum.new(album['name'], album['publish_date'], album['on_spotify'])
+        MusicAlbum.new(album['name'], album['publish_date'], album['spotify'])
       end
     else
       []
