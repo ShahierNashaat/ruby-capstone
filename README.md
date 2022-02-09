@@ -4,6 +4,10 @@
 This project is made as part of the Microverse curriculum for module 4- Ruby and Databases. "Catalog of my things" is a simple console app that allows users to manage collections of the things: Books, Music Albums, Movies, and Games.
 
 
+## Link
+
+[Presentation Link](https://drive.google.com/file/d/1UaEMQXoPiXu6Mo9P20E3ub3PxNiPdmwD/view?usp=sharing)
+
 ## Built With
 
 - Ruby
