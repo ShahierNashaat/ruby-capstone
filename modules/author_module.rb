@@ -3,7 +3,7 @@ require 'json'
 
 module AuthorModule
   def load_author
-    file = './json/author.json'
+    file = './json_files/author.json'
     data = []
     if File.exist?(file) && File.read(file) != ''
       JSON.parse(File.read(file)).each do |ele|
@@ -17,6 +17,6 @@ module AuthorModule
     @author.each do |author|
       data.push({first_name: author.first_name, last_name: author.last_name})
     end
-    File.write('./json/author.json', JSON.generate(data))
+    File.write('./json_files/author.json', JSON.generate(data))
   end
 end

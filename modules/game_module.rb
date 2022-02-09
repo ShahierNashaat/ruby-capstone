@@ -3,7 +3,7 @@ require 'json'
 
 module GameModule
   def load_game
-    file = './json/game.json'
+    file = './json_files/game.json'
     data = []
     if File.exist?(file) && File.read(file) != ''
       JSON.parse(File.read(file)).each do |ele|
@@ -18,6 +18,6 @@ module GameModule
     @game.each do |game|
       data.push({multiplayer: game.multiplayer, last_played_at: game.last_played_at, publish_date: game.publish_date})
     end
-    File.write('./json/game.json', JSON.generate(data))
+    File.write('./json_files/game.json', JSON.generate(data))
   end
 end
