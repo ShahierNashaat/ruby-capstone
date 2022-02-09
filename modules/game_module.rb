@@ -1,19 +1,20 @@
+require './ruby_classes/game'
+require 'json'
+
 module GameModule
-  def get_input(request_text)
-    print "#{request_text}: "
-    gets.chomp
+  def load_game
+    file = './json/game.json'
+    data = []
+    if File.exist?(file) && File.read(file) != ''
+      JSON.parse(File.read(file)).each do |ele|
+        data.push(game.new(ele['multiplayer', ele['last_played_at'], ele['publish_date']]))
   end
 
-  def add_new_game
-    puts "\n-------------------------------"
-    puts "\nENTER GAME DETAILS\n\n"
-
-    last_played_at = get_input('Input the last date you played the game')
-    multiplayer = get_input('Is the game Multiplayer? (enter Y for "Yes" anything except Y for "No"')
-
-    multiplayer = multiplayer == 'Y' || true
-    @app.add_game([multiplayer, last_played_at])
-    puts "\nNew Game Added!"
-    puts "\n-------------------------------"
+  def add_game
+    data = []
+    @game.each do |game|
+      data.push({multiplayer: game.multiplayer, last_played_at: game.last_played_at, publish_date: game.publish_date})
+    end
+    File.write('./json/game.json', JSON.generate(data))
   end
 end
