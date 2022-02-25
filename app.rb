@@ -82,10 +82,10 @@ class App
   end
 
   def add_book
-    print 'Please, type the book title: '
+    print 'Please, add the book title: '
     title = gets.chomp
 
-    print 'Please, type the book publisher: '
+    print 'Please, type the book publisher name: '
     publisher = gets.chomp
 
     print 'Please, type the book cover state: '
@@ -127,7 +127,7 @@ class App
     return unless last_played_at
 
     @games << Game.new(multiplayer, last_played_at, publish_date)
-    puts 'Game created successfully'
+    puts 'New Game created successfully'
   end
 
   def get_date_from_user(data)
